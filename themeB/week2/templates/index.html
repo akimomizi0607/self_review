@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自分レビュー</title>
+</head>
+<body>
+    <h1>自分レビュー</h1>
+    <p>今日の日付：{{ today }}</p>
+    <p>今までの記録を振り返ろう</p>
+    <h2>マイスレッド</h2>
+    <ul>
+        {% for thread in threads %}
+        <li>
+            <a href="{{ url_for('show_thread', thread_name=thread) }}">{{ thread }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
