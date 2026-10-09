@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スレッド削除の確認 — 自分レビュー</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='post.css') }}">
+</head>
+<body>
+    <h1>スレッド削除の確認</h1>
+<article class="post-card">
+    <h2 class="post-title">{{ thread.name }}</h2>
+    <p>このスレッドと中の投稿{{ post_count }}件を削除しますか？</p>
+</article>
+<form method="post" action="{{ url_for('execute_thread_delete') }}">
+    <input type="hidden" name="thread_id" value="{{ thread.id }}">
+    <button class="nav-button" type="submit">このスレッドと投稿を削除する</button>
+</form>
+<a class="nav-button" href="{{ url_for('select_thread_delete') }}">選択画面に戻る</a>
+</body>
+</html>

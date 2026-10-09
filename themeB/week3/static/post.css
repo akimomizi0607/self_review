@@ -1,0 +1,112 @@
+.post-card {
+    box-sizing: border-box;
+    max-width: 48rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.post-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+}
+
+.post-title {
+    min-width: 0;
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.post-date {
+    color: #555;
+}
+
+.post-rating {
+    margin: 0.5rem 0;
+}
+
+.post-body {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.thread-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    background: white;
+    border-bottom: 1px solid #ccc;
+}
+
+.thread-toolbar h1 {
+    min-width: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.thread-toolbar nav {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.thread-toolbar form {
+    margin: 0;
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #888;
+    border-radius: 4px;
+    background: #f6f6f6;
+    color: #222;
+    font: inherit;
+    line-height: 1.4;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background: #e8e8e8;
+}
+
+.thread-links p {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1rem 0;
+}
+
+.thread-links p::before {
+    content: "●";
+}
+
+.delete-selection-heading,
+.thread-list-heading {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.delete-selection-heading h2,
+.thread-list-heading h2 {
+    margin: 0;
+}

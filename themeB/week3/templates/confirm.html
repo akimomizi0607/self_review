@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>投稿内容の確認 — 自分レビュー</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='post.css') }}">
+</head>
+<body>
+<h1>投稿内容の確認</h1>
+<p>{{ thread_name }}に、この内容で投稿しますか？</p>
+<article class="post-card">
+    <div class="post-header">
+        <h2 class="post-title">{{ headtext }}</h2>
+        <span class="post-date">投稿前</span>
+    </div>
+    <p class="post-rating">星評価：★{{ rating }}</p>
+    <p class="post-body">{{ bodytext }}</p>
+</article>
+
+<form method="post" action="{{ url_for('show_thread', thread_name=thread_name) }}">
+    <input type="hidden" name="rating" value="{{ rating }}">
+    <input type="hidden" name="headtext" value="{{ headtext }}">
+    <input type="hidden" name="bodytext" value="{{ bodytext }}">
+    <button class="nav-button" type="submit">この内容で投稿</button>
+</form>
+<button class="nav-button" type="button" onclick="history.back()">入力を修正</button>
+</body>
+</html>
