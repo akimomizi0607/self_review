@@ -1,0 +1,22 @@
+{"kind":"deck","id":"pr/v3mkrr","name":"Deck"}
+{"kind":"layout","layoutId":"260e7bfe-2bb0-487d-8f9f-a60834e7da62","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"0ea81931-3838-4451-99a9-6a8c24e80f83","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/neyvqd","slide":1,"title":"第1週 日報｜作業と自己評価","textShapes":10}
+{"kind":"textbox","id":"sh/z2pcfe5o","slide":1,"text":"第1週 日報｜作業と自己評価","textPreview":"第1週 日報｜作業と自己評価","textChars":14,"textLines":1,"bbox":[58,34,1164,58]}
+{"kind":"textbox","id":"sh/03ydojm9","slide":1,"text":"自分レビュー　｜　2026年9月25日","textPreview":"自分レビュー　｜　2026年9月25日","textChars":19,"textLines":1,"bbox":[60,102,1160,42]}
+{"kind":"textbox","id":"sh/l47uhonu","slide":1,"text":"今日の作業","textPreview":"今日の作業","textChars":5,"textLines":1,"bbox":[60,184,520,36]}
+{"kind":"textbox","id":"sh/qdwvi94r","slide":1,"text":"・要件定義・基本設計とPC／スマートフォン画面案を整理\n・発表用PowerPoint（要件定義＋基本設計の2枚）を作成\n・Python、pip、Git、.venv、Flaskを準備\n・一時的なFlask確認ページをブラウザーに表示","textPreview":"・要件定義・基本設計とPC／スマートフォン画面案を整理 | ・発表用PowerPoint（要件定義＋基本設計の2枚）を作成 | ・Python、pip、Git、.venv、Flaskを準備 | ・一時的なFlask確認ページをブラウザーに表示","textChars":115,"textLines":4,"bbox":[60,236,540,250]}
+{"kind":"textbox","id":"sh/be5cbu5c","slide":1,"text":"本人の自己評価","textPreview":"本人の自己評価","textChars":7,"textLines":1,"bbox":[665,184,540,36]}
+{"kind":"textbox","id":"sh/cfedkzmx","slide":1,"text":"作業進行度　20％","textPreview":"作業進行度　20％","textChars":9,"textLines":1,"bbox":[665,238,520,52]}
+{"kind":"textbox","id":"sh/d0nud4ni","slide":1,"text":"理解度　制作物 60％　／　技術 0％","textPreview":"理解度　制作物 60％　／　技術 0％","textChars":19,"textLines":1,"bbox":[665,310,540,48]}
+{"kind":"textbox","id":"sh/a90vut4b","slide":1,"text":"分かったこと　設計の進め方","textPreview":"分かったこと　設計の進め方","textChars":13,"textLines":1,"bbox":[665,390,540,36]}
+{"kind":"textbox","id":"sh/va9cny5w","slide":1,"text":"まだよく分からないこと　技術面全般","textPreview":"まだよく分からないこと　技術面全般","textChars":17,"textLines":1,"bbox":[665,444,560,65]}
+{"kind":"textbox","id":"sh/bmdgrep8","slide":1,"text":"環境構築の結果：先生の確認済み","textPreview":"環境構築の結果：先生の確認済み","textChars":15,"textLines":1,"bbox":[60,616,1160,34]}
+{"kind":"notes","id":"nt/neyvqd","slide":1,"text":"進行度・理解度は本人の自己評価。環境構築結果は先生に確認済み。"}
+{"kind":"slide","id":"sl/2rw79v","slide":2,"title":"環境準備・次回の予定","textShapes":5}
+{"kind":"textbox","id":"sh/x4b2l4j2","slide":2,"text":"環境準備・次回の予定","textPreview":"環境準備・次回の予定","textChars":10,"textLines":1,"bbox":[58,34,1164,58]}
+{"kind":"textbox","id":"sh/ah0jap0b","slide":2,"text":"準備・動作確認","textPreview":"準備・動作確認","textChars":7,"textLines":1,"bbox":[60,132,530,36]}
+{"kind":"textbox","id":"sh/vi9kju1w","slide":2,"text":"Python 3.14.7・pip 26.2.1　確認済み\nGit 2.54.0　確認済み（第1週はコミットなし）\n.venv作成・Flask 3.1.3の読み込み　確認済み\n一時的な確認ページ　ブラウザー表示済み。サーバー停止済み。\nChatGPT Plus・Chatタブ　未確認","textPreview":"Python 3.14.7・pip 26.2.1　確認済み | Git 2.54.0　確認済み（第1週はコミットなし） | .venv作成・Flask 3.1.3の読み込み　確認済み | 一時的な確認ページ　ブラウザー表示済み。サーバー停止済み。 | ChatGPT Plu...","textChars":141,"textLines":5,"bbox":[60,184,550,300]}
+{"kind":"textbox","id":"sh/k721gzit","slide":2,"text":"次回やること","textPreview":"次回やること","textChars":6,"textLines":1,"bbox":[680,132,540,36]}
+{"kind":"textbox","id":"sh/58b2p4je","slide":2,"text":"1　環境が使える状態か確認する\n2　設計に沿って実装を進める大まかな筋道を確認する\n\n未確認：ChatGPT Plusの契約状態・Chatタブの利用\nGitリポジトリの初期化・コミットはしていない","textPreview":"1　環境が使える状態か確認する | 2　設計に沿って実装を進める大まかな筋道を確認する |  | 未確認：ChatGPT Plusの契約状態・Chatタブの利用 | Gitリポジトリの初期化・コミットはしていない","textChars":98,"textLines":5,"bbox":[680,184,540,290]}
+{"kind":"notes","id":"nt/2rw79v","slide":2,"text":"未確認の項目は完了とせず、必要なら次回に確認する。"}

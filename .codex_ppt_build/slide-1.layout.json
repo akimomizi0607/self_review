@@ -1,0 +1,902 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/ub9ay4",
+    "id": "ub9ay4",
+    "slide": 1,
+    "layoutId": "fa0839f4-0c5c-41a3-9f2d-95c59d2362af",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "84bb7d61-058b-4fdf-ab1f-2ef6ce0c20ab",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#ECFAFF",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Meiryo"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "fa0839f4-0c5c-41a3-9f2d-95c59d2362af",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "84bb7d61-058b-4fdf-ab1f-2ef6ce0c20ab",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "84bb7d61-058b-4fdf-ab1f-2ef6ce0c20ab",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/il4be54f",
+      "id": "1",
+      "bbox": [
+        60,
+        36,
+        1160,
+        54
+      ],
+      "geometry": "rect",
+      "text": "自分レビューの要件定義",
+      "textPreview": "自分レビューの要件定義",
+      "resolvedFontSize": 44,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 44,
+        "typeface": "Meiryo",
+        "color": "#20526B",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "自分レビューの要件定義"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "自分レビューの要件定義",
+          "resolvedTextStyle": {
+            "fontSize": 44,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "自分レビューの要件定義",
+              "fontSize": 44,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5ovupk36",
+      "id": "2",
+      "bbox": [
+        60,
+        100,
+        1160,
+        46
+      ],
+      "geometry": "rect",
+      "text": "自分の一日を記録し、星とグラフで振り返る",
+      "textPreview": "自分の一日を記録し、星とグラフで振り返る",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 28,
+        "typeface": "Meiryo",
+        "color": "#20526B",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "自分の一日を記録し、星とグラフで振り返る"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "自分の一日を記録し、星とグラフで振り返る",
+          "resolvedTextStyle": {
+            "fontSize": 28,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "自分の一日を記録し、星とグラフで振り返る",
+              "fontSize": 28,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4nmtgfml",
+      "id": "3",
+      "bbox": [
+        60,
+        170,
+        540,
+        34
+      ],
+      "geometry": "rect",
+      "text": "基本機能",
+      "textPreview": "基本機能",
+      "resolvedFontSize": 26,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 26,
+        "typeface": "Meiryo",
+        "color": "#E97832",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "基本機能"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "基本機能",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Meiryo",
+            "color": "#E97832",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "基本機能",
+              "fontSize": 26,
+              "typeface": "Meiryo",
+              "color": "#E97832",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vytcja54",
+      "id": "4",
+      "bbox": [
+        60,
+        214,
+        555,
+        285
+      ],
+      "geometry": "rect",
+      "text": "・一日の出来事を投稿（文章は必須）\n・星評価はスレッド設定に応じて入力\n・画像は任意：JPG／PNGを最大4枚、各5MBまで\n・日別平均を折れ線、投稿数を棒で表示\n・全体評価は日別平均の平均。日ごとを同じ重さで集計",
+      "textPreview": "・一日の出来事を投稿（文章は必須） | ・星評価はスレッド設定に応じて入力 | ・画像は任意：JPG／PNGを最大4枚、各5MBまで | ・日別平均を折れ線、投稿数を棒で表示 | ・全体評価は日別平均の平均。日ごとを同じ重さで集計",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "Meiryo",
+        "color": "#20526B",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 5,
+        "lines": [
+          {
+            "index": 1,
+            "text": "・一日の出来事を投稿（文章は必須）"
+          },
+          {
+            "index": 2,
+            "text": "・星評価はスレッド設定に応じて入力"
+          },
+          {
+            "index": 3,
+            "text": "・画像は任意：JPG／PNGを最大4枚、各5MBまで"
+          },
+          {
+            "index": 4,
+            "text": "・日別平均を折れ線、投稿数を棒で表示"
+          },
+          {
+            "index": 5,
+            "text": "・全体評価は日別平均の平均。日ごとを同じ重さで集計"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "・一日の出来事を投稿（文章は必須）",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "・一日の出来事を投稿（文章は必須）",
+              "fontSize": 22,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "・星評価はスレッド設定に応じて入力",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "・星評価はスレッド設定に応じて入力",
+              "fontSize": 22,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "・画像は任意：JPG／PNGを最大4枚、各5MBまで",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "・画像は任意：JPG／PNGを最大4枚、各5MBまで",
+              "fontSize": 22,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "・日別平均を折れ線、投稿数を棒で表示",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "・日別平均を折れ線、投稿数を棒で表示",
+              "fontSize": 22,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 5,
+          "text": "・全体評価は日別平均の平均。日ごとを同じ重さで集計",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "・全体評価は日別平均の平均。日ごとを同じ重さで集計",
+              "fontSize": 22,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/uxkba54j",
+      "id": "5",
+      "bbox": [
+        670,
+        170,
+        550,
+        34
+      ],
+      "geometry": "rect",
+      "text": "スレッド設定・通知",
+      "textPreview": "スレッド設定・通知",
+      "resolvedFontSize": 26,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 26,
+        "typeface": "Meiryo",
+        "color": "#E97832",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "スレッド設定・通知"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "スレッド設定・通知",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Meiryo",
+            "color": "#E97832",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "スレッド設定・通知",
+              "fontSize": 26,
+              "typeface": "Meiryo",
+              "color": "#E97832",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hkvul03u",
+      "id": "6",
+      "bbox": [
+        670,
+        214,
+        550,
+        250
+      ],
+      "geometry": "rect",
+      "text": "・初期スレッド「一日の評価」は削除不可\n・新規スレッドは星集計ON／1時間削除OFF\n・1時間削除ONなら星集計OFF。本文・画像を削除\n・22時にメール通知（初期設定：毎晩）\n・PCとアプリサーバー稼働中に送信",
+      "textPreview": "・初期スレッド「一日の評価」は削除不可 | ・新規スレッドは星集計ON／1時間削除OFF | ・1時間削除ONなら星集計OFF。本文・画像を削除 | ・22時にメール通知（初期設定：毎晩） | ・PCとアプリサーバー稼働中に送信",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "Meiryo",
+        "color": "#20526B",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 5,
+        "lines": [
+          {
+            "index": 1,
+            "text": "・初期スレッド「一日の評価」は削除不可"
+          },
+          {
+            "index": 2,
+            "text": "・新規スレッドは星集計ON／1時間削除OFF"
+          },
+          {
+            "index": 3,
+            "text": "・1時間削除ONなら星集計OFF。本文・画像を削除"
+          },
+          {
+            "index": 4,
+            "text": "・22時にメール通知（初期設定：毎晩）"
+          },
+          {
+            "index": 5,
+            "text": "・PCとアプリサーバー稼働中に送信"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "・初期スレッド「一日の評価」は削除不可",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "・初期スレッド「一日の評価」は削除不可",
+              "fontSize": 22,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "・新規スレッドは星集計ON／1時間削除OFF",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "・新規スレッドは星集計ON／1時間削除OFF",
+              "fontSize": 22,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "・1時間削除ONなら星集計OFF。本文・画像を削除",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "・1時間削除ONなら星集計OFF。本文・画像を削除",
+              "fontSize": 22,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "・22時にメール通知（初期設定：毎晩）",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "・22時にメール通知（初期設定：毎晩）",
+              "fontSize": 22,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 5,
+          "text": "・PCとアプリサーバー稼働中に送信",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "・PCとアプリサーバー稼働中に送信",
+              "fontSize": 22,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gj2tcvm9",
+      "id": "7",
+      "bbox": [
+        60,
+        535,
+        1160,
+        32
+      ],
+      "geometry": "rect",
+      "text": "第5週の候補（第4週までの進み具合で再検討）",
+      "textPreview": "第5週の候補（第4週までの進み具合で再検討）",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 23,
+        "typeface": "Meiryo",
+        "color": "#E97832",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "第5週の候補（第4週までの進み具合で再検討）"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "第5週の候補（第4週までの進み具合で再検討）",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Meiryo",
+            "color": "#E97832",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "第5週の候補（第4週までの進み具合で再検討）",
+              "fontSize": 23,
+              "typeface": "Meiryo",
+              "color": "#E97832",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fexcvul8",
+      "id": "8",
+      "bbox": [
+        60,
+        572,
+        1160,
+        35
+      ],
+      "geometry": "rect",
+      "text": "第一候補：1時間で消えるスレッド　／　候補：画像投稿・22時メール通知",
+      "textPreview": "第一候補：1時間で消えるスレッド　／　候補：画像投稿・22時メール通知",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21,
+        "typeface": "Meiryo",
+        "color": "#20526B",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "第一候補：1時間で消えるスレッド　／　候補：画像投稿・22時メール通知"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "第一候補：1時間で消えるスレッド　／　候補：画像投稿・22時メール通知",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "第一候補：1時間で消えるスレッド　／　候補：画像投稿・22時メール通知",
+              "fontSize": 21,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/etobmp4n",
+      "id": "9",
+      "bbox": [
+        60,
+        646,
+        1160,
+        32
+      ],
+      "geometry": "rect",
+      "text": "配色：背景 #ECFAFF　文字 #20526B　アクセント #E97832",
+      "textPreview": "配色：背景 #ECFAFF　文字 #20526B　アクセント #E97832",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21,
+        "typeface": "Meiryo",
+        "color": "#20526B",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "配色：背景 #ECFAFF　文字 #20526B　アクセント #E97832"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "配色：背景 #ECFAFF　文字 #20526B　アクセント #E97832",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "配色：背景 #ECFAFF　文字 #20526B　アクセント #E97832",
+              "fontSize": 21,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

@@ -1,0 +1,844 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/neyvqd",
+    "id": "neyvqd",
+    "slide": 1,
+    "layoutId": "0ea81931-3838-4451-99a9-6a8c24e80f83",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "260e7bfe-2bb0-487d-8f9f-a60834e7da62",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#ECFAFF",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Meiryo"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "0ea81931-3838-4451-99a9-6a8c24e80f83",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "260e7bfe-2bb0-487d-8f9f-a60834e7da62",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "260e7bfe-2bb0-487d-8f9f-a60834e7da62",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/z2pcfe5o",
+      "id": "1",
+      "bbox": [
+        58,
+        34,
+        1164,
+        58
+      ],
+      "geometry": "rect",
+      "text": "第1週 日報｜作業と自己評価",
+      "textPreview": "第1週 日報｜作業と自己評価",
+      "resolvedFontSize": 42,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 42,
+        "typeface": "Meiryo",
+        "color": "#20526B",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "第1週 日報｜作業と自己評価"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "第1週 日報｜作業と自己評価",
+          "resolvedTextStyle": {
+            "fontSize": 42,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "第1週 日報｜作業と自己評価",
+              "fontSize": 42,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/03ydojm9",
+      "id": "2",
+      "bbox": [
+        60,
+        102,
+        1160,
+        42
+      ],
+      "geometry": "rect",
+      "text": "自分レビュー　｜　2026年9月25日",
+      "textPreview": "自分レビュー　｜　2026年9月25日",
+      "resolvedFontSize": 27,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 27,
+        "typeface": "Meiryo",
+        "color": "#20526B",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "自分レビュー　｜　2026年9月25日"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "自分レビュー　｜　2026年9月25日",
+          "resolvedTextStyle": {
+            "fontSize": 27,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "自分レビュー　｜　2026年9月25日",
+              "fontSize": 27,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/l47uhonu",
+      "id": "3",
+      "bbox": [
+        60,
+        184,
+        520,
+        36
+      ],
+      "geometry": "rect",
+      "text": "今日の作業",
+      "textPreview": "今日の作業",
+      "resolvedFontSize": 27,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 27,
+        "typeface": "Meiryo",
+        "color": "#E97832",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "今日の作業"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "今日の作業",
+          "resolvedTextStyle": {
+            "fontSize": 27,
+            "typeface": "Meiryo",
+            "color": "#E97832",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "今日の作業",
+              "fontSize": 27,
+              "typeface": "Meiryo",
+              "color": "#E97832",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qdwvi94r",
+      "id": "4",
+      "bbox": [
+        60,
+        236,
+        540,
+        250
+      ],
+      "geometry": "rect",
+      "text": "・要件定義・基本設計とPC／スマートフォン画面案を整理\n・発表用PowerPoint（要件定義＋基本設計の2枚）を作成\n・Python、pip、Git、.venv、Flaskを準備\n・一時的なFlask確認ページをブラウザーに表示",
+      "textPreview": "・要件定義・基本設計とPC／スマートフォン画面案を整理 | ・発表用PowerPoint（要件定義＋基本設計の2枚）を作成 | ・Python、pip、Git、.venv、Flaskを準備 | ・一時的なFlask確認ページをブラウザーに表示",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Meiryo",
+        "color": "#20526B",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 6,
+        "lines": [
+          {
+            "index": 1,
+            "text": "・要件定義・基本設計とPC／スマートフォン画面"
+          },
+          {
+            "index": 2,
+            "text": "案を整理"
+          },
+          {
+            "index": 3,
+            "text": "・発表用PowerPoint（要件定義＋基本設計の2"
+          },
+          {
+            "index": 4,
+            "text": "枚）を作成"
+          },
+          {
+            "index": 5,
+            "text": "・Python、pip、Git、.venv、Flaskを準備"
+          },
+          {
+            "index": 6,
+            "text": "・一時的なFlask確認ページをブラウザーに表示"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "・要件定義・基本設計とPC／スマートフォン画面案を整理",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "・要件定義・基本設計とPC／スマートフォン画面案を整理",
+              "fontSize": 24,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "・発表用PowerPoint（要件定義＋基本設計の2枚）を作成",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "・発表用PowerPoint（要件定義＋基本設計の2枚）を作成",
+              "fontSize": 24,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "・Python、pip、Git、.venv、Flaskを準備",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "・Python、pip、Git、.venv、Flaskを準備",
+              "fontSize": 24,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "・一時的なFlask確認ページをブラウザーに表示",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "・一時的なFlask確認ページをブラウザーに表示",
+              "fontSize": 24,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/be5cbu5c",
+      "id": "5",
+      "bbox": [
+        665,
+        184,
+        540,
+        36
+      ],
+      "geometry": "rect",
+      "text": "本人の自己評価",
+      "textPreview": "本人の自己評価",
+      "resolvedFontSize": 27,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 27,
+        "typeface": "Meiryo",
+        "color": "#E97832",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "本人の自己評価"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "本人の自己評価",
+          "resolvedTextStyle": {
+            "fontSize": 27,
+            "typeface": "Meiryo",
+            "color": "#E97832",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "本人の自己評価",
+              "fontSize": 27,
+              "typeface": "Meiryo",
+              "color": "#E97832",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cfedkzmx",
+      "id": "6",
+      "bbox": [
+        665,
+        238,
+        520,
+        52
+      ],
+      "geometry": "rect",
+      "text": "作業進行度　20％",
+      "textPreview": "作業進行度　20％",
+      "resolvedFontSize": 36,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 36,
+        "typeface": "Meiryo",
+        "color": "#20526B",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "作業進行度　20％"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "作業進行度　20％",
+          "resolvedTextStyle": {
+            "fontSize": 36,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "作業進行度　20％",
+              "fontSize": 36,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d0nud4ni",
+      "id": "7",
+      "bbox": [
+        665,
+        310,
+        540,
+        48
+      ],
+      "geometry": "rect",
+      "text": "理解度　制作物 60％　／　技術 0％",
+      "textPreview": "理解度　制作物 60％　／　技術 0％",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 28,
+        "typeface": "Meiryo",
+        "color": "#20526B",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "理解度　制作物 60％　／　技術 0％"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "理解度　制作物 60％　／　技術 0％",
+          "resolvedTextStyle": {
+            "fontSize": 28,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "理解度　制作物 60％　／　技術 0％",
+              "fontSize": 28,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a90vut4b",
+      "id": "8",
+      "bbox": [
+        665,
+        390,
+        540,
+        36
+      ],
+      "geometry": "rect",
+      "text": "分かったこと　設計の進め方",
+      "textPreview": "分かったこと　設計の進め方",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 23,
+        "typeface": "Meiryo",
+        "color": "#20526B",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "分かったこと　設計の進め方"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "分かったこと　設計の進め方",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "分かったこと　設計の進め方",
+              "fontSize": 23,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/va9cny5w",
+      "id": "9",
+      "bbox": [
+        665,
+        444,
+        560,
+        65
+      ],
+      "geometry": "rect",
+      "text": "まだよく分からないこと　技術面全般",
+      "textPreview": "まだよく分からないこと　技術面全般",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 23,
+        "typeface": "Meiryo",
+        "color": "#20526B",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "まだよく分からないこと　技術面全般"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "まだよく分からないこと　技術面全般",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "まだよく分からないこと　技術面全般",
+              "fontSize": 23,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bmdgrep8",
+      "id": "10",
+      "bbox": [
+        60,
+        616,
+        1160,
+        34
+      ],
+      "geometry": "rect",
+      "text": "環境構築の結果：先生の確認済み",
+      "textPreview": "環境構築の結果：先生の確認済み",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "Meiryo",
+        "color": "#20526B",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "環境構築の結果：先生の確認済み"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "環境構築の結果：先生の確認済み",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "環境構築の結果：先生の確認済み",
+              "fontSize": 22,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

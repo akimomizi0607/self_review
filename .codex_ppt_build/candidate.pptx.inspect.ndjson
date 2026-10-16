@@ -1,0 +1,23 @@
+{"kind":"deck","id":"pr/vydyy0","name":"Deck"}
+{"kind":"layout","layoutId":"84bb7d61-058b-4fdf-ab1f-2ef6ce0c20ab","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"fa0839f4-0c5c-41a3-9f2d-95c59d2362af","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/ub9ay4","slide":1,"title":"自分レビューの要件定義","textShapes":9}
+{"kind":"textbox","id":"sh/il4be54f","slide":1,"text":"自分レビューの要件定義","textPreview":"自分レビューの要件定義","textChars":11,"textLines":1,"bbox":[60,36,1160,54]}
+{"kind":"textbox","id":"sh/5ovupk36","slide":1,"text":"自分の一日を記録し、星とグラフで振り返る","textPreview":"自分の一日を記録し、星とグラフで振り返る","textChars":20,"textLines":1,"bbox":[60,100,1160,46]}
+{"kind":"textbox","id":"sh/4nmtgfml","slide":1,"text":"基本機能","textPreview":"基本機能","textChars":4,"textLines":1,"bbox":[60,170,540,34]}
+{"kind":"textbox","id":"sh/vytcja54","slide":1,"text":"・一日の出来事を投稿（文章は必須）\n・星評価はスレッド設定に応じて入力\n・画像は任意：JPG／PNGを最大4枚、各5MBまで\n・日別平均を折れ線、投稿数を棒で表示\n・全体評価は日別平均の平均。日ごとを同じ重さで集計","textPreview":"・一日の出来事を投稿（文章は必須） | ・星評価はスレッド設定に応じて入力 | ・画像は任意：JPG／PNGを最大4枚、各5MBまで | ・日別平均を折れ線、投稿数を棒で表示 | ・全体評価は日別平均の平均。日ごとを同じ重さで集計","textChars":107,"textLines":5,"bbox":[60,214,555,285]}
+{"kind":"textbox","id":"sh/uxkba54j","slide":1,"text":"スレッド設定・通知","textPreview":"スレッド設定・通知","textChars":9,"textLines":1,"bbox":[670,170,550,34]}
+{"kind":"textbox","id":"sh/hkvul03u","slide":1,"text":"・初期スレッド「一日の評価」は削除不可\n・新規スレッドは星集計ON／1時間削除OFF\n・1時間削除ONなら星集計OFF。本文・画像を削除\n・22時にメール通知（初期設定：毎晩）\n・PCとアプリサーバー稼働中に送信","textPreview":"・初期スレッド「一日の評価」は削除不可 | ・新規スレッドは星集計ON／1時間削除OFF | ・1時間削除ONなら星集計OFF。本文・画像を削除 | ・22時にメール通知（初期設定：毎晩） | ・PCとアプリサーバー稼働中に送信","textChars":106,"textLines":5,"bbox":[670,214,550,250]}
+{"kind":"textbox","id":"sh/gj2tcvm9","slide":1,"text":"第5週の候補（第4週までの進み具合で再検討）","textPreview":"第5週の候補（第4週までの進み具合で再検討）","textChars":22,"textLines":1,"bbox":[60,535,1160,32]}
+{"kind":"textbox","id":"sh/fexcvul8","slide":1,"text":"第一候補：1時間で消えるスレッド　／　候補：画像投稿・22時メール通知","textPreview":"第一候補：1時間で消えるスレッド　／　候補：画像投稿・22時メール通知","textChars":35,"textLines":1,"bbox":[60,572,1160,35]}
+{"kind":"textbox","id":"sh/etobmp4n","slide":1,"text":"配色：背景 #ECFAFF　文字 #20526B　アクセント #E97832","textPreview":"配色：背景 #ECFAFF　文字 #20526B　アクセント #E97832","textChars":38,"textLines":1,"bbox":[60,646,1160,32]}
+{"kind":"notes","id":"nt/ub9ay4","slide":1,"text":"アプリの目的と機能は、学生との相談で決めた内容。"}
+{"kind":"slide","id":"sl/z9u7ds","slide":2,"title":"画面イメージと保存データ","textShapes":6}
+{"kind":"textbox","id":"sh/ilwbe1c3","slide":2,"text":"画面イメージと保存データ","textPreview":"画面イメージと保存データ","textChars":12,"textLines":1,"bbox":[60,36,1160,54]}
+{"kind":"textbox","id":"sh/k7etgbut","slide":2,"text":"操作","textPreview":"操作","textChars":2,"textLines":1,"bbox":[850,118,360,34]}
+{"kind":"textbox","id":"sh/7a5cb6dk","slide":2,"text":"スレッドを選び、文章・必要な星・任意の画像を投稿。\n投稿はスレッド内で確認。日付が変わると日別平均を更新。","textPreview":"スレッドを選び、文章・必要な星・任意の画像を投稿。 | 投稿はスレッド内で確認。日付が変わると日別平均を更新。","textChars":53,"textLines":2,"bbox":[850,162,360,154]}
+{"kind":"textbox","id":"sh/69wbilcz","slide":2,"text":"保存する情報","textPreview":"保存する情報","textChars":6,"textLines":1,"bbox":[850,342,360,34]}
+{"kind":"textbox","id":"sh/tc7udgvq","slide":2,"text":"投稿：日付・時刻・スレッド・文章・星・画像名\nスレッド：名前・星集計・1時間削除の設定\n文章と設定はJSON、画像はファイルとして保存。","textPreview":"投稿：日付・時刻・スレッド・文章・星・画像名 | スレッド：名前・星集計・1時間削除の設定 | 文章と設定はJSON、画像はファイルとして保存。","textChars":68,"textLines":3,"bbox":[850,386,360,150]}
+{"kind":"textbox","id":"sh/sbetkbu5","slide":2,"text":"画面の日付・評価・投稿はイメージ用のサンプル","textPreview":"画面の日付・評価・投稿はイメージ用のサンプル","textChars":22,"textLines":1,"bbox":[48,625,1160,34]}
+{"kind":"image","id":"im/kbudof6l","slide":2,"name":"","alt":"自分レビューのPC画面案。全体評価、日別平均の折れ線と投稿件数の棒、スレッド別の今日の投稿が見える。","bbox":[48,112,760,426]}
+{"kind":"notes","id":"nt/z9u7ds","slide":2,"text":"数値、日付、投稿文は画面イメージ用のサンプル。画像・メールの仕様は授業の進み具合に合わせて見直す。"}

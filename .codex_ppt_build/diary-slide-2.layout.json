@@ -1,0 +1,615 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/2rw79v",
+    "id": "2rw79v",
+    "slide": 2,
+    "layoutId": "0ea81931-3838-4451-99a9-6a8c24e80f83",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "260e7bfe-2bb0-487d-8f9f-a60834e7da62",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#ECFAFF",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Meiryo"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "0ea81931-3838-4451-99a9-6a8c24e80f83",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "260e7bfe-2bb0-487d-8f9f-a60834e7da62",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "260e7bfe-2bb0-487d-8f9f-a60834e7da62",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x4b2l4j2",
+      "id": "1",
+      "bbox": [
+        58,
+        34,
+        1164,
+        58
+      ],
+      "geometry": "rect",
+      "text": "環境準備・次回の予定",
+      "textPreview": "環境準備・次回の予定",
+      "resolvedFontSize": 42,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 42,
+        "typeface": "Meiryo",
+        "color": "#20526B",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "環境準備・次回の予定"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "環境準備・次回の予定",
+          "resolvedTextStyle": {
+            "fontSize": 42,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "環境準備・次回の予定",
+              "fontSize": 42,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ah0jap0b",
+      "id": "2",
+      "bbox": [
+        60,
+        132,
+        530,
+        36
+      ],
+      "geometry": "rect",
+      "text": "準備・動作確認",
+      "textPreview": "準備・動作確認",
+      "resolvedFontSize": 27,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 27,
+        "typeface": "Meiryo",
+        "color": "#E97832",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "準備・動作確認"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "準備・動作確認",
+          "resolvedTextStyle": {
+            "fontSize": 27,
+            "typeface": "Meiryo",
+            "color": "#E97832",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "準備・動作確認",
+              "fontSize": 27,
+              "typeface": "Meiryo",
+              "color": "#E97832",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vi9kju1w",
+      "id": "3",
+      "bbox": [
+        60,
+        184,
+        550,
+        300
+      ],
+      "geometry": "rect",
+      "text": "Python 3.14.7・pip 26.2.1　確認済み\nGit 2.54.0　確認済み（第1週はコミットなし）\n.venv作成・Flask 3.1.3の読み込み　確認済み\n一時的な確認ページ　ブラウザー表示済み。サーバー停止済み。\nChatGPT Plus・Chatタブ　未確認",
+      "textPreview": "Python 3.14.7・pip 26.2.1　確認済み | Git 2.54.0　確認済み（第1週はコミットなし） | .venv作成・Flask 3.1.3の読み込み　確認済み | 一時的な確認ページ　ブラウザー表示済み。サーバー停止済み。 | ChatGPT Plu...",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 23,
+        "typeface": "Meiryo",
+        "color": "#20526B",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 6,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Python 3.14.7・pip 26.2.1　確認済み"
+          },
+          {
+            "index": 2,
+            "text": "Git 2.54.0　確認済み（第1週はコミットなし）"
+          },
+          {
+            "index": 3,
+            "text": ".venv作成・Flask 3.1.3の読み込み　確認済み"
+          },
+          {
+            "index": 4,
+            "text": "一時的な確認ページ"
+          },
+          {
+            "index": 5,
+            "text": "ブラウザー表示済み。サーバー停止済み。"
+          },
+          {
+            "index": 6,
+            "text": "ChatGPT Plus・Chatタブ　未確認"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Python 3.14.7・pip 26.2.1　確認済み",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Python 3.14.7・pip 26.2.1　確認済み",
+              "fontSize": 23,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "Git 2.54.0　確認済み（第1週はコミットなし）",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Git 2.54.0　確認済み（第1週はコミットなし）",
+              "fontSize": 23,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": ".venv作成・Flask 3.1.3の読み込み　確認済み",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": ".venv作成・Flask 3.1.3の読み込み　確認済み",
+              "fontSize": 23,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "一時的な確認ページ　ブラウザー表示済み。サーバー停止済み。",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "一時的な確認ページ　ブラウザー表示済み。サーバー停止済み。",
+              "fontSize": 23,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 5,
+          "text": "ChatGPT Plus・Chatタブ　未確認",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ChatGPT Plus・Chatタブ　未確認",
+              "fontSize": 23,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/k721gzit",
+      "id": "4",
+      "bbox": [
+        680,
+        132,
+        540,
+        36
+      ],
+      "geometry": "rect",
+      "text": "次回やること",
+      "textPreview": "次回やること",
+      "resolvedFontSize": 27,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 27,
+        "typeface": "Meiryo",
+        "color": "#E97832",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "次回やること"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "次回やること",
+          "resolvedTextStyle": {
+            "fontSize": 27,
+            "typeface": "Meiryo",
+            "color": "#E97832",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "次回やること",
+              "fontSize": 27,
+              "typeface": "Meiryo",
+              "color": "#E97832",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/58b2p4je",
+      "id": "5",
+      "bbox": [
+        680,
+        184,
+        540,
+        290
+      ],
+      "geometry": "rect",
+      "text": "1　環境が使える状態か確認する\n2　設計に沿って実装を進める大まかな筋道を確認する\n\n未確認：ChatGPT Plusの契約状態・Chatタブの利用\nGitリポジトリの初期化・コミットはしていない",
+      "textPreview": "1　環境が使える状態か確認する | 2　設計に沿って実装を進める大まかな筋道を確認する |  | 未確認：ChatGPT Plusの契約状態・Chatタブの利用 | Gitリポジトリの初期化・コミットはしていない",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 23,
+        "typeface": "Meiryo",
+        "color": "#20526B",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 7,
+        "lines": [
+          {
+            "index": 1,
+            "text": "1　環境が使える状態か確認する"
+          },
+          {
+            "index": 2,
+            "text": "2"
+          },
+          {
+            "index": 3,
+            "text": "設計に沿って実装を進める大まかな筋道を確認する"
+          },
+          {
+            "index": 4,
+            "text": ""
+          },
+          {
+            "index": 5,
+            "text": "未確認：ChatGPT"
+          },
+          {
+            "index": 6,
+            "text": "Plusの契約状態・Chatタブの利用"
+          },
+          {
+            "index": 7,
+            "text": "Gitリポジトリの初期化・コミットはしていない"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "1　環境が使える状態か確認する",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "1　環境が使える状態か確認する",
+              "fontSize": 23,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "2　設計に沿って実装を進める大まかな筋道を確認する",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "2　設計に沿って実装を進める大まかな筋道を確認する",
+              "fontSize": 23,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "未確認：ChatGPT Plusの契約状態・Chatタブの利用",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "未確認：ChatGPT Plusの契約状態・Chatタブの利用",
+              "fontSize": 23,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 5,
+          "text": "Gitリポジトリの初期化・コミットはしていない",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Meiryo",
+            "color": "#20526B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Gitリポジトリの初期化・コミットはしていない",
+              "fontSize": 23,
+              "typeface": "Meiryo",
+              "color": "#20526B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

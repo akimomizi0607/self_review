@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新規スレッド — 自分レビュー</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='post.css') }}">
+</head>
+<body>
+<h1>新規スレッド</h1>
+<form method="post" action="{{ url_for('new_thread') }}">
+    <p>
+        <label for="thread_name">スレッド名</label><br>
+        <input type="text" id="thread_name" name="thread_name" required>
+    </p>
+    <button class="nav-button" type="submit">スレッドを作成</button>
+</form>
+<p>
+    <a class="nav-button" href="{{ url_for('index') }}">マイスレッドに戻る</a>
+</p>
+</body>
+</html>
