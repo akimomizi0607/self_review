@@ -1,21 +1,5 @@
 [
   {
-    "thread_name": "日誌",
-    "created_at": "2026-10-09 13:24:33",
-    "rating": "1",
-    "headtext": "てすと１",
-    "bodytext": "WiMAX",
-    "id": "7e80ffe6-f64e-4ef3-9fbe-7a59336d7596"
-  },
-  {
-    "thread_name": "日誌",
-    "created_at": "2026-10-09 13:25:28",
-    "rating": "1",
-    "headtext": "てすとんみ",
-    "bodytext": "ふわりあん」",
-    "id": "bee8faa0-6b5e-4c74-ba26-cec7a54e67a6"
-  },
-  {
     "thread_name": "今日の食事",
     "created_at": "2026-10-09 13:45:42",
     "rating": "2",
@@ -32,67 +16,27 @@
     "id": "4eb9dc09-c852-4c60-a1e2-d36702e2d556"
   },
   {
+    "id": "b45c19f6-3739-4e59-acb3-7be5130b919a",
     "thread_name": "日誌",
-    "created_at": "2026-10-09 14:25:41",
-    "rating": "3",
-    "headtext": "てすと２",
-    "bodytext": "とうこうぺーじより",
-    "id": "519bb0cb-dae5-4703-bb1c-d25196f7778b"
-  },
-  {
-    "thread_name": "日誌",
-    "created_at": "2026-10-09 14:31:15",
-    "rating": "5",
-    "headtext": "てすと3",
-    "bodytext": "改良",
-    "id": "848d7e5f-c6c3-4b45-891b-49653ccf01af"
-  },
-  {
-    "thread_name": "日誌",
-    "created_at": "2026-10-09 14:36:02",
+    "created_at": "2026-10-16 14:14:04",
     "rating": "4",
-    "headtext": "確認用",
-    "bodytext": "ｊそｎ",
-    "id": "0c6a1ea5-5e84-4585-b428-ae06393e31fe"
+    "headtext": "テスト１",
+    "bodytext": "公園に行った"
   },
   {
+    "id": "742eb1d6-4377-4000-ad19-ef04fa7b2dd2",
     "thread_name": "日誌",
-    "created_at": "2026-10-09 14:42:21",
+    "created_at": "2026-10-16 14:14:25",
     "rating": "2",
-    "headtext": "ｃｆｖｇｂｈんｊｋ",
-    "bodytext": "ｘｄｆｇｂｈんｊｍｋ",
-    "id": "ddaca919-03e6-4999-ba16-caa4d5947686"
+    "headtext": "テスト２",
+    "bodytext": "砂浜へ行った"
   },
   {
+    "id": "83d0b75f-8520-4234-a6e5-698264774045",
     "thread_name": "日誌",
-    "created_at": "2026-10-09 15:01:12",
-    "rating": "3",
-    "headtext": "確認ページの確認",
-    "bodytext": "うつってるか",
-    "id": "f2f6335a-d457-47a5-ab99-a484db3024fb"
-  },
-  {
-    "thread_name": "日誌",
-    "created_at": "2026-10-09 15:04:52",
-    "rating": "2",
-    "headtext": "このない",
-    "bodytext": "このあに",
-    "id": "8ef3799b-84ce-481f-a1e7-dd3775d15df5"
-  },
-  {
-    "id": "898723e5-ee5c-4b9b-9553-1696e253b116",
-    "thread_name": "日誌",
-    "created_at": "2026-10-16 11:45:55",
-    "rating": "3",
-    "headtext": "１０・１６にち",
-    "bodytext": "よんしゅうめ"
-  },
-  {
-    "id": "337da160-8d9f-4fc3-b56b-377e9815c3c2",
-    "thread_name": "日誌",
-    "created_at": "2026-10-16 12:05:32",
-    "rating": "3",
-    "headtext": "てすと",
-    "bodytext": "こ"
+    "created_at": "2026-10-16 14:14:39",
+    "rating": "5",
+    "headtext": "テスト３",
+    "bodytext": "人助けした"
   }
 ]
