@@ -1,8 +1,9 @@
 import json
 from pathlib import Path
 from flask import Flask, render_template, request, redirect, url_for
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from uuid import uuid4
+
 app = Flask(__name__)
 THREADS_FILE = Path(__file__).resolve().parent / "threads.json"
 POSTS_FILE = Path(__file__).resolve().parent / "posts.json"
@@ -16,6 +17,10 @@ def find_thread(thread_name):
         if thread["name"] == thread_name:
             return thread
     return None
+def can_edit(post):
+    created_at = datetime.strptime(post["created_at"], "%Y-%m-%d %H:%M:%S")
+    elapsed = datetime.now() - created_at
+    return timedelta(0) <= elapsed <= timedelta(hours=2)
 
 @app.route("/")
 def index():
@@ -118,6 +123,71 @@ def select_delete(thread_name):
         thread_name=thread_name,
         thread_posts=thread_posts
     )
+@app.route("/threads/<thread_name>/edit")
+def select_edit(thread_name):
+    if POSTS_FILE.exists():
+        with POSTS_FILE.open("r", encoding="utf-8") as f:
+            posts = json.load(f)
+    else:
+        posts = []
+
+    thread_posts = []
+    for post in posts:
+        if post["thread_name"] == thread_name and can_edit(post):
+            thread_posts.append(post)
+
+    return render_template(
+        "edit_select.html",
+        thread_name=thread_name,
+        thread_posts=thread_posts
+    )
+@app.route("/threads/<thread_name>/edit/input", methods=["GET", "POST"])
+def edit_post(thread_name):
+    if find_thread(thread_name) is None:
+        return render_template("input_error.html", message="スレッドが見つかりません。"), 404
+
+    if request.method == "POST":
+        post_id = request.form.get("post_id")
+    else:
+        post_id = request.args.get("post_id")
+    if not post_id:
+        return render_template("input_error.html", message="編集する投稿を選択してください。"), 400
+
+    posts = []
+    if POSTS_FILE.exists():
+        with POSTS_FILE.open("r", encoding="utf-8") as f:
+            posts = json.load(f)
+
+    for post in posts:
+        if post.get("id") == post_id and post["thread_name"] == thread_name:
+            if not can_edit(post):
+                return render_template("input_error.html", message="編集できる時間を過ぎています。"), 400
+            if request.method == "POST":
+                rating = request.form.get("rating")
+                headtext = request.form.get("headtext", "").strip()
+                bodytext = request.form.get("bodytext", "").strip()
+
+                if rating not in ("1", "2", "3", "4", "5") or not headtext or not bodytext:
+                    return render_template(
+                        "input_error.html",
+                        message="星評価・見出し・本文を入力してください。"
+                    ), 400
+
+                return render_template(
+                    "edit_confirm.html",
+                    thread_name=thread_name,
+                    post_id=post["id"],
+                    rating=rating,
+                    headtext=headtext,
+                    bodytext=bodytext
+                )
+            return render_template(
+                "edit_post.html",
+                thread_name=thread_name,
+                post=post
+            )
+
+    return render_template("input_error.html", message="投稿が見つかりません。"), 404
 @app.route("/threads/<thread_name>/delete/confirm", methods=["POST"])
 def confirm_delete(thread_name):
     post_id = request.form.get("post_id")
@@ -157,6 +227,44 @@ def execute_delete(thread_name):
             return redirect(url_for("show_thread", thread_name=thread_name), code=303)
 
     return render_template("input_error.html", message="選択した投稿が見つかりません。"), 404
+@app.route("/threads/<thread_name>/edit/execute", methods=["POST"])
+def execute_edit(thread_name):
+    if find_thread(thread_name) is None:
+        return render_template("input_error.html", message="スレッドが見つかりません。"), 404
+    post_id = request.form.get("post_id")
+    if not post_id:
+        return render_template("input_error.html", message="編集する投稿を選択してください。"), 400
+    rating = request.form.get("rating")
+    headtext = request.form.get("headtext", "").strip()
+    bodytext = request.form.get("bodytext", "").strip()
+
+    if rating not in ("1", "2", "3", "4", "5") or not headtext or not bodytext:
+        return render_template(
+            "input_error.html",
+            message="星評価・見出し・本文を入力してください。"
+        ), 400
+    posts = []
+    if POSTS_FILE.exists():
+        with POSTS_FILE.open("r", encoding="utf-8") as f:
+            posts = json.load(f)
+
+    for post in posts:
+        if post.get("id") == post_id and post["thread_name"] == thread_name:
+            if not can_edit(post):
+                return render_template(
+                    "input_error.html",
+                    message="編集できる時間を過ぎています。"
+                ), 400
+
+            post["rating"] = rating
+            post["headtext"] = headtext
+            post["bodytext"] = bodytext
+            with POSTS_FILE.open("w", encoding="utf-8") as f:
+                json.dump(posts, f, ensure_ascii=False, indent=2)
+            return redirect(url_for("show_thread", thread_name=thread_name), code=303)
+
+    return render_template("input_error.html", message="選択した投稿が見つかりません。"), 404
+
 
 @app.route("/new-thread", methods=["GET", "POST"])
 def new_thread():

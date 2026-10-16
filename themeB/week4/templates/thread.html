@@ -14,6 +14,7 @@
                 <button class="nav-button" type="submit">新規投稿</button>
             </form>
             <a class="nav-button" href="{{ url_for('select_delete', thread_name=thread_name) }}">投稿の削除</a>
+            <a class="nav-button" href="{{ url_for('select_edit', thread_name=thread_name) }}">投稿の編集</a>
             <a class="nav-button" href="{{ url_for('index') }}">スレッド一覧に戻る</a>
         </nav>
     </header>
