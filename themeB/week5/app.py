@@ -127,6 +127,8 @@ def index():
     for day, ratings in ratings_by_date.items():
         daily_averages[day] = sum(ratings) / len(ratings)
 
+    today_average = daily_averages.get(today_key)
+
     if daily_averages:
         overall_average = sum(daily_averages.values()) / len(daily_averages)
     else:
@@ -148,6 +150,7 @@ def index():
         "index.html",
         today=today,
         today_count=today_count,
+        today_average=today_average,
         threads=threads,
         overall_average=overall_average,
         chart_dates=chart_dates,
