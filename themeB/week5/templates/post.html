@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ thread_name }} — 自分レビュー</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='post.css') }}">
+</head>
+<body>
+    <h1>{{ thread_name }}</h1>
+    <p>新しい投稿を入力してください。</p>
+    <form method="post" action="{{ url_for('confirm_post', thread_name=thread_name) }}">
+    <fieldset style="width: fit-content;">
+        <legend>星評価</legend>
+        {% for score in range(1, 6) %}
+        <label>
+            <input type="radio" name="rating" value="{{ score }}">
+            ★{{ score }}
+        </label>
+        {% endfor %}
+    </fieldset>
+<p>
+    <label for="headtext">見出し</label><br>
+    <input type="text" id="headtext" name="headtext"
+        placeholder="日向ぼっこ">
+</p>
+
+<p>
+    <label for="bodytext">内容</label><br>
+    <textarea id="bodytext" name="bodytext" rows="5" cols="40"
+        placeholder="今日は公園へ行った。"></textarea>
+</p>
+<button class="nav-button" type="submit">入力内容を確認</button>
+</form>
+<a class="nav-button" href="{{ url_for('show_thread', thread_name=thread_name) }}">記事一覧に戻る</a>
+</body>
+</html>

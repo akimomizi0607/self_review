@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ thread_name }} — 投稿の削除</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='post.css') }}">
+</head>
+<body>
+<form method="post" action="{{ url_for('confirm_delete', thread_name=thread_name) }}">
+    <div class="delete-selection-heading">
+        <h2>削除する投稿を1件選んでください</h2>
+        <button class="nav-button" type="submit">削除</button>
+        <a class="nav-button" href="{{ url_for('show_thread', thread_name=thread_name) }}">スレッドに戻る</a>
+    </div>
+{% for post in thread_posts|reverse %}
+    <article class="post-card">
+        <label>
+            <input type="radio" name="post_id" value="{{ post.id }}" required>
+            この投稿を選ぶ
+        </label>
+        <div class="post-header">
+            <h3 class="post-title">{{ post.headtext }}</h3>
+            <span class="post-date">{{ post.created_at }}</span>
+        </div>
+        {% if post.rating %}
+        <p class="post-rating">星評価：★{{ post.rating }}</p>
+        {% endif %}
+        <p class="post-body">{{ post.bodytext }}</p>
+    </article>
+{% endfor %}
+</form>
+</body>
+</html>

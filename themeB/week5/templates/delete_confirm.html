@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>削除内容の確認 — 自分レビュー</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='post.css') }}">
+</head>
+<body>
+<h1>削除内容の確認</h1>
+<p>{{ thread_name }}から次の投稿を削除しますか？</p>
+<article class="post-card">
+    <div class="post-header">
+        <h2 class="post-title">{{ post.headtext }}</h2>
+        <span class="post-date">{{ post.created_at }}</span>
+    </div>
+    <p class="post-rating">星評価：★{{ post.rating }}</p>
+    <p class="post-body">{{ post.bodytext }}</p>
+</article>
+<form method="post" action="{{ url_for('execute_delete', thread_name=thread_name) }}">
+    <input type="hidden" name="post_id" value="{{ post.id }}">
+    <button class="nav-button" type="submit">この投稿を削除する</button>
+</form>
+<button class="nav-button" type="button" onclick="history.back()">選択画面に戻る</button>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>変更内容の確認</title>
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='post.css') }}">
+</head>
+<body>
+    <h1>変更内容の確認</h1>
+    <p>{{ thread_name }}の投稿を、次の内容に変更します。</p>
+    <article class="post-card">
+        <h2>{{ headtext }}</h2>
+        <p>星評価：★{{ rating }}</p>
+        <p class="post-body">{{ bodytext }}</p>
+    </article>
+    <form method="post" action="{{ url_for('execute_edit', thread_name=thread_name) }}">
+        <input type="hidden" name="post_id" value="{{ post_id }}">
+        <input type="hidden" name="rating" value="{{ rating }}">
+        <input type="hidden" name="headtext" value="{{ headtext }}">
+        <input type="hidden" name="bodytext" value="{{ bodytext }}">
+        <button class="nav-button" type="submit">この内容で変更を保存</button>
+    </form>
+    <button class="nav-button" type="button" onclick="history.back()">
+        入力を修正
+    </button>
+</body>
+</html>
