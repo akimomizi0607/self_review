@@ -26,7 +26,54 @@ def can_edit(post):
 def index():
     today = date.today().strftime("%Y年%m月%d日")
     threads = load_threads()
-    return render_template("index.html", today=today, threads=threads)
+    if POSTS_FILE.exists():
+        with POSTS_FILE.open("r", encoding="utf-8") as f:
+            posts = json.load(f)
+    else:
+        posts = []
+    print("トップページで読み込んだ投稿数:", len(posts))
+    ratings_by_date = {}
+    today_key = date.today().strftime("%Y-%m-%d")
+    today_count = 0
+    for post in posts:
+        day = post["created_at"][:10]
+        if day == today_key:
+            today_count += 1
+        if day not in ratings_by_date:
+            ratings_by_date[day] = []
+        ratings_by_date[day].append(int(post["rating"]))
+
+    daily_averages = {}
+    for day, ratings in ratings_by_date.items():
+        daily_averages[day] = sum(ratings) / len(ratings)
+
+    if daily_averages:
+        overall_average = sum(daily_averages.values()) / len(daily_averages)
+    else:
+        overall_average = None
+
+    print("全体評価:", overall_average)
+    chart_dates = sorted(daily_averages)
+    chart_averages = []
+    chart_counts = []
+    for day in chart_dates:
+        chart_averages.append(daily_averages[day])
+        chart_counts.append(len(ratings_by_date[day]))
+
+    print("グラフの日付:", chart_dates)
+    print("グラフの平均:", chart_averages)
+    print("グラフの件数:", chart_counts)
+    print("今日の投稿数:", today_count)
+    return render_template(
+        "index.html",
+        today=today,
+        today_count=today_count,
+        threads=threads,
+        overall_average=overall_average,
+        chart_dates=chart_dates,
+        chart_averages=chart_averages,
+        chart_counts=chart_counts,
+    )
 @app.route("/threads/<thread_name>", methods=["GET", "POST"])
 def show_thread(thread_name):
     if find_thread(thread_name) is None:
