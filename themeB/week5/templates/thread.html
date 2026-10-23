@@ -29,11 +29,18 @@
         <p class="post-rating">星評価：★{{ post.rating }}</p>
         {% endif %}
         <p class="post-body">{{ post.bodytext }}</p>
-        {% for image_name in post.get("image_names", []) %}
-            <img src="{{ url_for('static', filename='uploads/' + image_name) }}"
-                alt="添付画像 {{ loop.index }}"
-                style="max-width: 200px; max-height: 200px;">
-        {% endfor %}
+        {% if post.get("image_names") %}
+            <div class="post-images">
+                {% for image_name in post.get("image_names", []) %}
+                    <a class="post-image-link"
+                        href="{{ url_for('static', filename='uploads/' + image_name) }}"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="{{ url_for('static', filename='uploads/' + image_name) }}"
+                            alt="添付画像 {{ loop.index }}">
+                    </a>
+                {% endfor %}
+            </div>
+        {% endif %}
     </article>
 {% endfor %}
 </body>

@@ -16,11 +16,18 @@
     </div>
     <p class="post-rating">星評価：★{{ rating }}</p>
     <p class="post-body">{{ bodytext }}</p>
-    {% for image_name in image_names %}
-        <img src="{{ url_for('static', filename='uploads/' + image_name) }}"
-            alt="添付画像 {{ loop.index }}"
-            style="max-width: 200px; max-height: 200px;">
-    {% endfor %}
+    {% if image_names %}
+        <div class="post-images">
+            {% for image_name in image_names %}
+                <a class="post-image-link"
+                   href="{{ url_for('static', filename='uploads/' + image_name) }}"
+                   target="_blank" rel="noopener noreferrer">
+                    <img src="{{ url_for('static', filename='uploads/' + image_name) }}"
+                         alt="添付画像 {{ loop.index }}">
+                </a>
+            {% endfor %}
+        </div>
+    {% endif %}
 </article>
 
 <form method="post" action="{{ url_for('show_thread', thread_name=thread_name) }}">

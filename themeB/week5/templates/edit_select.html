@@ -19,6 +19,9 @@
             <h3>{{ post.headtext }}</h3>
             <p>{{ post.created_at }} ／ 星評価：★{{ post.rating }}</p>
             <p class="post-body">{{ post.bodytext }}</p>
+            {% with image_names=post.get("image_names", []) %}
+                {% include "_image_gallery.html" %}
+            {% endwith %}
         </article>
         {% else %}
         <p>編集できる投稿はありません。</p>

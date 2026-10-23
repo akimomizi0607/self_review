@@ -16,6 +16,9 @@
     </div>
     <p class="post-rating">星評価：★{{ post.rating }}</p>
     <p class="post-body">{{ post.bodytext }}</p>
+    {% with image_names=post.get("image_names", []) %}
+        {% include "_image_gallery.html" %}
+    {% endwith %}
 </article>
 <form method="post" action="{{ url_for('execute_delete', thread_name=thread_name) }}">
     <input type="hidden" name="post_id" value="{{ post.id }}">

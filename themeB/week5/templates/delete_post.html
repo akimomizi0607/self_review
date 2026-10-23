@@ -27,6 +27,9 @@
         <p class="post-rating">星評価：★{{ post.rating }}</p>
         {% endif %}
         <p class="post-body">{{ post.bodytext }}</p>
+        {% with image_names=post.get("image_names", []) %}
+            {% include "_image_gallery.html" %}
+        {% endwith %}
     </article>
 {% endfor %}
 </form>

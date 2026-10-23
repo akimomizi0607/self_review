@@ -24,6 +24,84 @@ def can_edit(post):
     elapsed = datetime.now() - created_at
     return timedelta(0) <= elapsed <= timedelta(hours=2)
 
+def validate_images(images):
+    """新規投稿と編集で、同じ添付条件を確認する。"""
+    if len(images) > 4:
+        return "画像は4枚まで選択できます。"
+    for image in images:
+        if Path(image.filename).suffix.lower() not in {".jpg", ".jpeg", ".png"}:
+            return "画像はJPGまたはPNGを選択してください。"
+        image.stream.seek(0, 2)
+        image_size = image.stream.tell()
+        image.stream.seek(0)
+        if image_size > 5 * 1000 * 1000:
+            return "画像は1枚あたり5MBまでです。"
+    return None
+
+def save_images(images):
+    image_names = []
+    for image in images:
+        extension = Path(image.filename).suffix.lower()
+        image_name = f"{uuid4().hex}{extension}"
+        image.save(UPLOAD_FOLDER / image_name)
+        image_names.append(image_name)
+    return image_names
+
+def is_saved_image_name(image_name):
+    if not isinstance(image_name, str):
+        return False
+    path = Path(image_name)
+    return (
+        path.name == image_name
+        and path.suffix in {".jpg", ".jpeg", ".png"}
+        and len(path.stem) == 32
+        and all(c in "0123456789abcdef" for c in path.stem)
+    )
+
+def valid_saved_images(image_names):
+    """確認画面から届いた画像名と、保存済みファイルの存在を確認する。"""
+    if not 1 <= len(image_names) <= 4:
+        return False
+    for image_name in image_names:
+        if not is_saved_image_name(image_name):
+            return False
+        if not (UPLOAD_FOLDER / image_name).is_file():
+            return False
+    return True
+
+def delete_unused_images(image_names, remaining_posts):
+    """削除・差し替えの対象だった画像だけ、全投稿の参照を確認して削除する。"""
+    if not isinstance(image_names, list) or not isinstance(remaining_posts, list):
+        return 0
+    used_image_names = set()
+    for post in remaining_posts:
+        if not isinstance(post, dict):
+            return 0
+        names = post.get("image_names", [])
+        if not isinstance(names, list) or any(not isinstance(name, str) for name in names):
+            app.logger.warning("画像の使用状況を確認できないため、画像の削除を見送りました。")
+            return 0
+        used_image_names.update(names)
+
+    deleted_count = 0
+    for image_name in image_names:
+        if not is_saved_image_name(image_name) or image_name in used_image_names:
+            continue
+        try:
+            upload_folder = UPLOAD_FOLDER.absolute()
+            # 保存先や画像が別の場所へのリンクなら削除しない。
+            if upload_folder.resolve() != upload_folder:
+                continue
+            image_path = upload_folder / image_name
+            if image_path.is_symlink() or image_path.resolve().parent != upload_folder:
+                continue
+            if image_path.is_file():
+                image_path.unlink()
+                deleted_count += 1
+        except OSError:
+            app.logger.warning("画像ファイルを削除できませんでした: %s", image_name)
+    return deleted_count
+
 @app.route("/")
 def index():
     today = date.today().strftime("%Y年%m月%d日")
@@ -147,39 +225,16 @@ def confirm_post(thread_name):
     for image in request.files.getlist("images"):
         if image.filename:
             images.append(image)
-    if len(images) > 4:
-        return render_template(
-            "input_error.html",
-            message="画像は4枚まで選択できます。"
-        ), 400
-    for image in images:
-        extension = Path(image.filename).suffix.lower()
-        if extension not in {".jpg", ".jpeg", ".png"}:
-            return render_template(
-                "input_error.html",
-                message="画像はJPGまたはPNGを選択してください。"
-            ), 400
-        image.stream.seek(0, 2)
-        image_size = image.stream.tell()
-        image.stream.seek(0)
-
-        if image_size > 5 * 1000 * 1000:
-            return render_template(
-                "input_error.html",
-                message="画像は1枚あたり5MBまでです。"
-            ), 400
+    image_error = validate_images(images)
+    if image_error:
+        return render_template("input_error.html", message=image_error), 400
     if not rating:
         return render_template("input_error.html", message="星評価を選択してください。"), 400
     if not headtext:
         return render_template("input_error.html", message="見出しを入力してください。"), 400
     if not bodytext:
         return render_template("input_error.html", message="内容を入力してください。"), 400
-    image_names = []
-    for image in images:
-            extension = Path(image.filename).suffix.lower()
-            image_name = f"{uuid4().hex}{extension}"
-            image.save(UPLOAD_FOLDER / image_name)
-            image_names.append(image_name)
+    image_names = save_images(images)
 
     print("保存した画像名:", image_names)
     return render_template(
@@ -257,13 +312,26 @@ def edit_post(thread_name):
                         message="星評価・見出し・本文を入力してください。"
                     ), 400
 
+                images = []
+                for image in request.files.getlist("images"):
+                    if image.filename:
+                        images.append(image)
+                image_error = validate_images(images)
+                if image_error:
+                    return render_template("input_error.html", message=image_error), 400
+
+                # 未選択なら、保存済みの投稿から元の画像名を使う。
+                replace_images = bool(images)
+                image_names = save_images(images) if replace_images else post.get("image_names", [])
                 return render_template(
                     "edit_confirm.html",
                     thread_name=thread_name,
                     post_id=post["id"],
                     rating=rating,
                     headtext=headtext,
-                    bodytext=bodytext
+                    bodytext=bodytext,
+                    image_names=image_names,
+                    replace_images=replace_images
                 )
             return render_template(
                 "edit_post.html",
@@ -305,9 +373,11 @@ def execute_delete(thread_name):
 
     for post in posts:
         if post.get("id") == post_id and post["thread_name"] == thread_name:
+            image_names = post.get("image_names", [])
             posts.remove(post)
             with POSTS_FILE.open("w", encoding="utf-8") as f:
                 json.dump(posts, f, ensure_ascii=False, indent=2)
+            delete_unused_images(image_names, posts)
             return redirect(url_for("show_thread", thread_name=thread_name), code=303)
 
     return render_template("input_error.html", message="選択した投稿が見つかりません。"), 404
@@ -340,11 +410,26 @@ def execute_edit(thread_name):
                     message="編集できる時間を過ぎています。"
                 ), 400
 
+            replace_images = request.form.get("replace_images", "0")
+            if replace_images not in {"0", "1"}:
+                return render_template("input_error.html", message="画像の変更内容を確認してください。"), 400
+            if replace_images == "1":
+                image_names = request.form.getlist("image_names")
+                if not valid_saved_images(image_names):
+                    return render_template(
+                        "input_error.html", message="画像を選び直して、変更内容を確認してください。"
+                    ), 400
+
+            old_image_names = post.get("image_names", [])
             post["rating"] = rating
             post["headtext"] = headtext
             post["bodytext"] = bodytext
+            if replace_images == "1":
+                post["image_names"] = image_names
             with POSTS_FILE.open("w", encoding="utf-8") as f:
                 json.dump(posts, f, ensure_ascii=False, indent=2)
+            if replace_images == "1":
+                delete_unused_images(old_image_names, posts)
             return redirect(url_for("show_thread", thread_name=thread_name), code=303)
 
     return render_template("input_error.html", message="選択した投稿が見つかりません。"), 404
@@ -421,15 +506,19 @@ def execute_thread_delete():
                     posts = json.load(f)
 
             remaining_posts = []
+            removed_image_names = []
             for post in posts:
                 if post["thread_name"] != thread["name"]:
                     remaining_posts.append(post)
+                elif isinstance(post.get("image_names", []), list):
+                    removed_image_names.extend(post.get("image_names", []))
 
             threads.remove(thread)
             with POSTS_FILE.open("w", encoding="utf-8") as f:
                 json.dump(remaining_posts, f, ensure_ascii=False, indent=2)
             with THREADS_FILE.open("w", encoding="utf-8") as f:
                 json.dump(threads, f, ensure_ascii=False, indent=2)
+            delete_unused_images(removed_image_names, remaining_posts)
             return redirect(url_for("index"), code=303)
 
     return render_template("input_error.html", message="選択したスレッドが見つかりません。"), 404
