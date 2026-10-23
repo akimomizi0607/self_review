@@ -176,8 +176,6 @@ def show_thread(thread_name):
             return render_template("input_error.html", message="星評価を選択してください。"), 400
         if not headtext:
             return render_template("input_error.html", message="見出しを入力してください。"), 400
-        if not bodytext:
-            return render_template("input_error.html", message="内容を入力してください。"), 400
         print("受け取った星評価:", rating)
         print("受け取った見出し:", headtext)
         print("受け取った内容:", bodytext)
@@ -232,8 +230,6 @@ def confirm_post(thread_name):
         return render_template("input_error.html", message="星評価を選択してください。"), 400
     if not headtext:
         return render_template("input_error.html", message="見出しを入力してください。"), 400
-    if not bodytext:
-        return render_template("input_error.html", message="内容を入力してください。"), 400
     image_names = save_images(images)
 
     print("保存した画像名:", image_names)
@@ -306,10 +302,10 @@ def edit_post(thread_name):
                 headtext = request.form.get("headtext", "").strip()
                 bodytext = request.form.get("bodytext", "").strip()
 
-                if rating not in ("1", "2", "3", "4", "5") or not headtext or not bodytext:
+                if rating not in ("1", "2", "3", "4", "5") or not headtext:
                     return render_template(
                         "input_error.html",
-                        message="星評価・見出し・本文を入力してください。"
+                        message="星評価と見出しを入力してください。"
                     ), 400
 
                 images = []
@@ -392,10 +388,10 @@ def execute_edit(thread_name):
     headtext = request.form.get("headtext", "").strip()
     bodytext = request.form.get("bodytext", "").strip()
 
-    if rating not in ("1", "2", "3", "4", "5") or not headtext or not bodytext:
+    if rating not in ("1", "2", "3", "4", "5") or not headtext:
         return render_template(
             "input_error.html",
-            message="星評価・見出し・本文を入力してください。"
+            message="星評価と見出しを入力してください。"
         ), 400
     posts = []
     if POSTS_FILE.exists():
