@@ -16,12 +16,20 @@
     </div>
     <p class="post-rating">星評価：★{{ rating }}</p>
     <p class="post-body">{{ bodytext }}</p>
+    {% for image_name in image_names %}
+        <img src="{{ url_for('static', filename='uploads/' + image_name) }}"
+            alt="添付画像 {{ loop.index }}"
+            style="max-width: 200px; max-height: 200px;">
+    {% endfor %}
 </article>
 
 <form method="post" action="{{ url_for('show_thread', thread_name=thread_name) }}">
     <input type="hidden" name="rating" value="{{ rating }}">
     <input type="hidden" name="headtext" value="{{ headtext }}">
     <input type="hidden" name="bodytext" value="{{ bodytext }}">
+    {% for image_name in image_names %}
+        <input type="hidden" name="image_names" value="{{ image_name }}">
+    {% endfor %}
     <button class="nav-button" type="submit">この内容で投稿</button>
 </form>
 <button class="nav-button" type="button" onclick="history.back()">入力を修正</button>

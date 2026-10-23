@@ -7,6 +7,8 @@ from uuid import uuid4
 app = Flask(__name__)
 THREADS_FILE = Path(__file__).resolve().parent / "threads.json"
 POSTS_FILE = Path(__file__).resolve().parent / "posts.json"
+UPLOAD_FOLDER = Path(__file__).resolve().parent / "static" / "uploads"
+UPLOAD_FOLDER.mkdir(exist_ok=True)
 def load_threads():
     if not THREADS_FILE.exists():
         return []
@@ -91,6 +93,7 @@ def show_thread(thread_name):
         rating = request.form.get("rating")
         headtext = request.form.get("headtext", "").strip()
         bodytext = request.form.get("bodytext", "").strip()
+        image_names = request.form.getlist("image_names")
         if not rating:
             return render_template("input_error.html", message="星評価を選択してください。"), 400
         if not headtext:
@@ -106,7 +109,8 @@ def show_thread(thread_name):
             "created_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             "rating": rating,
             "headtext": headtext,
-            "bodytext": bodytext
+            "bodytext": bodytext,
+            "image_names": image_names
         }
         print("保存する投稿:", post)
 
@@ -139,18 +143,52 @@ def confirm_post(thread_name):
     rating = request.form.get("rating")
     headtext = request.form.get("headtext", "").strip()
     bodytext = request.form.get("bodytext", "").strip()
+    images = []
+    for image in request.files.getlist("images"):
+        if image.filename:
+            images.append(image)
+    if len(images) > 4:
+        return render_template(
+            "input_error.html",
+            message="画像は4枚まで選択できます。"
+        ), 400
+    for image in images:
+        extension = Path(image.filename).suffix.lower()
+        if extension not in {".jpg", ".jpeg", ".png"}:
+            return render_template(
+                "input_error.html",
+                message="画像はJPGまたはPNGを選択してください。"
+            ), 400
+        image.stream.seek(0, 2)
+        image_size = image.stream.tell()
+        image.stream.seek(0)
+
+        if image_size > 5 * 1000 * 1000:
+            return render_template(
+                "input_error.html",
+                message="画像は1枚あたり5MBまでです。"
+            ), 400
     if not rating:
         return render_template("input_error.html", message="星評価を選択してください。"), 400
     if not headtext:
         return render_template("input_error.html", message="見出しを入力してください。"), 400
     if not bodytext:
         return render_template("input_error.html", message="内容を入力してください。"), 400
+    image_names = []
+    for image in images:
+            extension = Path(image.filename).suffix.lower()
+            image_name = f"{uuid4().hex}{extension}"
+            image.save(UPLOAD_FOLDER / image_name)
+            image_names.append(image_name)
+
+    print("保存した画像名:", image_names)
     return render_template(
         "confirm.html",
         thread_name=thread_name,
         rating=rating,
         headtext=headtext,
-        bodytext=bodytext
+        bodytext=bodytext,
+        image_names=image_names
     )
 @app.route("/threads/<thread_name>/delete")
 def select_delete(thread_name):
@@ -164,7 +202,6 @@ def select_delete(thread_name):
     for post in posts:
         if post["thread_name"] == thread_name:
             thread_posts.append(post)
-
     return render_template(
         "delete_post.html",
         thread_name=thread_name,
