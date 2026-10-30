@@ -1,0 +1,31 @@
+{% extends "base_layout.html" %}
+
+{% block page_title %}{{ thread_name }} — 投稿の編集{% endblock %}
+{% block viewport_meta %}{% endblock %}
+
+{% block page_content %}
+    <h2>投稿の編集</h2>
+    <p>投稿から2時間以内の投稿を表示しています。</p>
+    <form method="get" action="{{ url_for('edit_post', thread_name=thread_name) }}">
+        {% for editable_post in thread_posts | reverse %}
+            <article class="post-card">
+                <label>
+                    <input type="radio" name="post_id" value="{{ editable_post.id }}" required>
+                    この投稿を選ぶ
+                </label>
+                <h3>{{ editable_post.headtext }}</h3>
+                <p>{{ editable_post.created_at }} ／ 星評価：★{{ editable_post.rating }}</p>
+                <p class="post-body-text">{{ editable_post.bodytext }}</p>
+                {% with image_names=editable_post.get("image_names", []) %}
+                    {% include "_post_image_gallery.html" %}
+                {% endwith %}
+            </article>
+        {% else %}
+            <p>編集できる投稿はありません。</p>
+        {% endfor %}
+        {% if thread_posts %}
+            <button class="navigation-button" type="submit">選んだ投稿を編集</button>
+        {% endif %}
+    </form>
+    <a class="navigation-button" href="{{ url_for('show_thread', thread_name=thread_name) }}">スレッドに戻る</a>
+{% endblock %}

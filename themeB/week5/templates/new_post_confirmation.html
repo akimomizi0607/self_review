@@ -1,0 +1,30 @@
+{% extends "base_layout.html" %}
+
+{% block page_title %}投稿内容の確認 — 自分レビュー{% endblock %}
+
+{% block page_content %}
+    <h1>投稿内容の確認</h1>
+    <p>{{ thread_name }}に、この内容で投稿しますか？</p>
+    <article class="post-card">
+        <div class="post-heading-row">
+            <h2 class="post-title">{{ headtext }}</h2>
+            <span class="post-created-at">投稿前</span>
+        </div>
+        <p class="post-rating">星評価：★{{ rating }}</p>
+        <p class="post-body-text">{{ bodytext }}</p>
+        {% with show_image_hint=false %}
+            {% include "_post_image_gallery.html" %}
+        {% endwith %}
+    </article>
+
+    <form method="post" action="{{ url_for('show_thread', thread_name=thread_name) }}">
+        <input type="hidden" name="rating" value="{{ rating }}">
+        <input type="hidden" name="headtext" value="{{ headtext }}">
+        <input type="hidden" name="bodytext" value="{{ bodytext }}">
+        {% for attached_image_name in image_names %}
+            <input type="hidden" name="image_names" value="{{ attached_image_name }}">
+        {% endfor %}
+        <button class="navigation-button" type="submit">この内容で投稿</button>
+    </form>
+    <button class="navigation-button" type="button" onclick="history.back()">入力を修正</button>
+{% endblock %}

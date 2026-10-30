@@ -1,0 +1,16 @@
+{% extends "base_layout.html" %}
+
+{% block page_title %}スレッド削除の確認 — 自分レビュー{% endblock %}
+
+{% block page_content %}
+    <h1>スレッド削除の確認</h1>
+    <article class="post-card">
+        <h2 class="post-title">{{ thread.name }}</h2>
+        <p>このスレッドと中の投稿{{ post_count }}件を削除しますか？</p>
+    </article>
+    <form method="post" action="{{ url_for('execute_thread_delete') }}">
+        <input type="hidden" name="thread_id" value="{{ thread.id }}">
+        <button class="navigation-button" type="submit">このスレッドと投稿を削除する</button>
+    </form>
+    <a class="navigation-button" href="{{ url_for('select_thread_delete') }}">選択画面に戻る</a>
+{% endblock %}

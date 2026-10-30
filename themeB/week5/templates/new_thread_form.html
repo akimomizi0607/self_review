@@ -1,0 +1,17 @@
+{% extends "base_layout.html" %}
+
+{% block page_title %}新規スレッド — 自分レビュー{% endblock %}
+
+{% block page_content %}
+    <h1>新規スレッド</h1>
+    <form method="post" action="{{ url_for('new_thread') }}">
+        <p>
+            <label for="thread-name-input">スレッド名</label><br>
+            <input type="text" id="thread-name-input" name="thread_name" required>
+        </p>
+        <button class="navigation-button" type="submit">スレッドを作成</button>
+    </form>
+    <p>
+        <a class="navigation-button" href="{{ url_for('index') }}">マイスレッドに戻る</a>
+    </p>
+{% endblock %}

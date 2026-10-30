@@ -1,0 +1,34 @@
+{% extends "base_layout.html" %}
+
+{% block page_title %}{{ thread_name }} — 自分レビュー{% endblock %}
+
+{% block page_content %}
+    <header class="thread-toolbar">
+        <h1>{{ thread_name }}</h1>
+        <nav aria-label="スレッドの操作">
+            <form action="{{ url_for('new_post', thread_name=thread_name) }}" method="get">
+                <button class="navigation-button" type="submit">新規投稿</button>
+            </form>
+            <a class="navigation-button" href="{{ url_for('select_delete', thread_name=thread_name) }}">投稿の削除</a>
+            <a class="navigation-button" href="{{ url_for('select_edit', thread_name=thread_name) }}">投稿の編集</a>
+            <a class="navigation-button" href="{{ url_for('index') }}">スレッド一覧に戻る</a>
+        </nav>
+    </header>
+
+    <h2>保存した投稿</h2>
+    {% for saved_post in thread_posts | reverse %}
+        <article class="post-card">
+            <div class="post-heading-row">
+                <h3 class="post-title">{{ saved_post.headtext }}</h3>
+                <span class="post-created-at">{{ saved_post.created_at }}</span>
+            </div>
+            {% if saved_post.rating %}
+                <p class="post-rating">星評価：★{{ saved_post.rating }}</p>
+            {% endif %}
+            <p class="post-body-text">{{ saved_post.bodytext }}</p>
+            {% with image_names=saved_post.get("image_names", []), show_image_hint=false %}
+                {% include "_post_image_gallery.html" %}
+            {% endwith %}
+        </article>
+    {% endfor %}
+{% endblock %}

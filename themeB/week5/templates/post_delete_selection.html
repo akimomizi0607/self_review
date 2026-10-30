@@ -1,0 +1,32 @@
+{% extends "base_layout.html" %}
+
+{% block page_title %}{{ thread_name }} — 投稿の削除{% endblock %}
+
+{% block page_content %}
+    <form method="post" action="{{ url_for('confirm_delete', thread_name=thread_name) }}">
+        <div class="delete-selection-heading">
+            <h2>削除する投稿を1件選んでください</h2>
+            <button class="navigation-button" type="submit">削除</button>
+            <a class="navigation-button" href="{{ url_for('show_thread', thread_name=thread_name) }}">スレッドに戻る</a>
+        </div>
+        {% for saved_post in thread_posts | reverse %}
+            <article class="post-card">
+                <label>
+                    <input type="radio" name="post_id" value="{{ saved_post.id }}" required>
+                    この投稿を選ぶ
+                </label>
+                <div class="post-heading-row">
+                    <h3 class="post-title">{{ saved_post.headtext }}</h3>
+                    <span class="post-created-at">{{ saved_post.created_at }}</span>
+                </div>
+                {% if saved_post.rating %}
+                    <p class="post-rating">星評価：★{{ saved_post.rating }}</p>
+                {% endif %}
+                <p class="post-body-text">{{ saved_post.bodytext }}</p>
+                {% with image_names=saved_post.get("image_names", []) %}
+                    {% include "_post_image_gallery.html" %}
+                {% endwith %}
+            </article>
+        {% endfor %}
+    </form>
+{% endblock %}

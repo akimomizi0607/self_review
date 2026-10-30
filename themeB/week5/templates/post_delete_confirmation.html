@@ -1,0 +1,24 @@
+{% extends "base_layout.html" %}
+
+{% block page_title %}削除内容の確認 — 自分レビュー{% endblock %}
+
+{% block page_content %}
+    <h1>削除内容の確認</h1>
+    <p>{{ thread_name }}から次の投稿を削除しますか？</p>
+    <article class="post-card">
+        <div class="post-heading-row">
+            <h2 class="post-title">{{ post.headtext }}</h2>
+            <span class="post-created-at">{{ post.created_at }}</span>
+        </div>
+        <p class="post-rating">星評価：★{{ post.rating }}</p>
+        <p class="post-body-text">{{ post.bodytext }}</p>
+        {% with image_names=post.get("image_names", []) %}
+            {% include "_post_image_gallery.html" %}
+        {% endwith %}
+    </article>
+    <form method="post" action="{{ url_for('execute_delete', thread_name=thread_name) }}">
+        <input type="hidden" name="post_id" value="{{ post.id }}">
+        <button class="navigation-button" type="submit">この投稿を削除する</button>
+    </form>
+    <button class="navigation-button" type="button" onclick="history.back()">選択画面に戻る</button>
+{% endblock %}

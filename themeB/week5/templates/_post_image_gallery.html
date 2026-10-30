@@ -1,0 +1,15 @@
+{% if image_names %}
+    {% if show_image_hint | default(true) %}
+        <p>画像をクリックすると別タブで開きます。</p>
+    {% endif %}
+    <div class="post-image-gallery">
+        {% for attached_image_name in image_names %}
+            <a class="post-image-thumbnail"
+               href="{{ url_for('static', filename='uploads/' + attached_image_name) }}"
+               target="_blank" rel="noopener noreferrer">
+                <img src="{{ url_for('static', filename='uploads/' + attached_image_name) }}"
+                     alt="添付画像 {{ loop.index }}">
+            </a>
+        {% endfor %}
+    </div>
+{% endif %}

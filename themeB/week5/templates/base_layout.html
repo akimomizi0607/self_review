@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    {% block viewport_meta %}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% endblock %}
+    <title>{% block page_title %}自分レビュー{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='diary_styles.css') }}">
+</head>
+<body>
+    {% block page_content %}{% endblock %}
+    {% block page_scripts %}{% endblock %}
+</body>
+</html>

@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>入力の確認 — 自分レビュー</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='post.css') }}">
-</head>
-<body>
+{% extends "base_layout.html" %}
+
+{% block page_title %}入力の確認 — 自分レビュー{% endblock %}
+
+{% block page_content %}
     <h1>入力を確認してください</h1>
     <p>{{ message }}</p>
-    <button class="nav-button" type="button" onclick="history.back()">入力画面に戻る</button>
-</body>
-</html>
+    <button class="navigation-button" type="button" onclick="history.back()">入力画面に戻る</button>
+{% endblock %}

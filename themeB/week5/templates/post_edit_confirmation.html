@@ -1,21 +1,17 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>変更内容の確認</title>
-    <link rel="stylesheet"
-        href="{{ url_for('static', filename='post.css') }}">
-</head>
-<body>
+{% extends "base_layout.html" %}
+
+{% block page_title %}変更内容の確認{% endblock %}
+
+{% block page_content %}
     <h1>変更内容の確認</h1>
     <p>{{ thread_name }}の投稿を、次の内容に変更します。</p>
     <article class="post-card">
         <h2>{{ headtext }}</h2>
         <p>星評価：★{{ rating }}</p>
-        <p class="post-body">{{ bodytext }}</p>
-        {% include "_image_gallery.html" %}
+        <p class="post-body-text">{{ bodytext }}</p>
+        {% include "_post_image_gallery.html" %}
     </article>
+
     <form method="post" action="{{ url_for('execute_edit', thread_name=thread_name) }}">
         <input type="hidden" name="post_id" value="{{ post_id }}">
         <input type="hidden" name="rating" value="{{ rating }}">
@@ -23,14 +19,11 @@
         <input type="hidden" name="bodytext" value="{{ bodytext }}">
         <input type="hidden" name="replace_images" value="{{ '1' if replace_images else '0' }}">
         {% if replace_images %}
-            {% for image_name in image_names %}
-                <input type="hidden" name="image_names" value="{{ image_name }}">
+            {% for attached_image_name in image_names %}
+                <input type="hidden" name="image_names" value="{{ attached_image_name }}">
             {% endfor %}
         {% endif %}
-        <button class="nav-button" type="submit">この内容で変更を保存</button>
+        <button class="navigation-button" type="submit">この内容で変更を保存</button>
     </form>
-    <button class="nav-button" type="button" onclick="history.back()">
-        入力を修正
-    </button>
-</body>
-</html>
+    <button class="navigation-button" type="button" onclick="history.back()">入力を修正</button>
+{% endblock %}
